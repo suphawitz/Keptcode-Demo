@@ -30,34 +30,66 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="kc-header">
 
         <!-- Navbar -->
-        <nav class="kc-navbar py-3 bg-black">
+        <nav class="kc-navbar py-3">
             <div class="kc-container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-3">
-                        <h1>Keptcode</h1>
+                        <h1 class="text-white">Keptcode</h1>
                     </div>
-                    <ul class="col-6 d-flex align-items-center justify-content-center gap-4 m-0">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul class="kc-nav-menu col-6 d-flex align-items-center justify-content-center gap-4 m-0">
+                        <li><a href="#" class="text">Home</a></li>
+                        <li><a href="#" class="text">Documentation</a></li>
+                        <li><a href="#" class="text">Forum</a></li>
+                        <li><a href="#" class="text">Pages</a></li>
+                        <li><a href="#" class="text">Blog</a></li>
+                        <li><a href="#" class="text">Contact</a></li>
                     </ul>
                     <div class="col-3 d-flex justify-content-end">
-                        <a class="kc-btn-animate kc-btn-slide d-flex align-items-center" href="#">
-                            <i class='bx bx-user fs-5 pe-1'></i> 
-                            <span>Get Keptcode</span> 
-                        </a>
+                        <div class="d-block">
+                            <a class="kc-btn kc-btn-animate d-flex align-items-center" href="#">
+                                <i class='bx bx-user fs-5 pe-1'></i> 
+                                <span>Get Keptcode</span> 
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- End Navbar -->
 
+
+        <div class="kc-header-content h-100">
+            <div class="kc-container pt-5">
+                <div class="pt-5 d-flex flex-column align-items-center">
+                    <h1 class="fs-1 text-white">How Can We Help You?</h1>
+                    <p class="fs-5 fw-lighter text-white">Search here to get answers to your questions</p>
+
+                    <div class="pt-5 col-8">
+                        <form action="" method="get" class="d-flex align-items-center justify-content-between bg-white py-4 px-5 rounded-pill">
+                            <input type="text" class="col-6 border-end" placeholder="What are you looking for?" required>
+                            <select name="" id="" class="border-0" style="outline: none;">
+                                <option value="all">All Doc</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <div class="d-block">
+                                <div class="kc-btn kc-btn-slide">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input type="submit" value="Search" class="fs-5 d-inline text-white">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="d-block pt-3 ps-3">
+                            <h1 class="d-inline fs-5 text-white">Popular : <span class="fs-6 fw-lighter">Code, Basic, Blog, Wordpress</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Get Script JS -->

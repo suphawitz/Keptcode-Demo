@@ -19,21 +19,26 @@ img { width: 100%; vertical-align: middle; }
     padding: 0 2rem;
 }
 
-.kc-btn-animate {
-    position: relative;
+/* --------------- btn --------------- */
+.kc-btn {
+    font-weight: 500;
     padding: .8rem 1.6rem;
-    width: 100%;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 100px;
     transition: all .25s ease;   
-    overflow: hidden; 
-}
-.kc-btn-animate:hover {
-    color: #1489f6;
-    border: 1px solid #1489f6;
+    overflow: hidden;
+    border-radius: 100px;
 }
 
+/* --------------- animate btn --------------- */
+.kc-btn-animate {
+    position: relative;
+    color: #fff;
+    overflow: hidden; 
+    border: 1px solid #fff;
+    z-index: 5;
+}
+.kc-btn-animate:hover {
+    border: 1px solid #1489f6;
+}
 .kc-btn-animate::before {
     content: '';
     position: absolute;
@@ -41,12 +46,53 @@ img { width: 100%; vertical-align: middle; }
     left: 0;
     width: 0;
     height: 150%;
-    background-color: #1489f6;
+    background-color: #033d93;
     transform: skew(50deg);
     transition: .5s ease;
+    z-index: -1;
 }
-
 .kc-btn-animate:hover::before {
     width: 150%;
+    background-color: #1489f6;
+}
+
+/* --------------- slide btn --------------- */
+.kc-btn-slide {
+    position: relative;
+    color: #fff;
+    background-color: #1489f6;
+    z-index: 5;
+}
+.kc-btn-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 150%;
     background-color: #fff;
+    transform: skew(50deg);
+    transition: .5s ease;
+    z-index: -1;
+}
+.kc-btn-slide:hover::before {
+    width: 150%;
+    background-color: #1489f6;
+}
+
+
+
+/* ---------------------------------------------- */
+/* ================= Header ================= */
+/* ---------------------------------------------- */
+.kc-header {
+    width: 100%;
+    height: 780px;
+    background: url(../images/banner_bg1.jpeg) center / cover no-repeat;
+}
+
+
+/* --------------- navbar --------------- */
+.kc-nav-menu li a {
+    color: #fff;
 }
