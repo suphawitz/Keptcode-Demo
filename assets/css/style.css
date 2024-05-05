@@ -1,9 +1,11 @@
+/* ========== Import font Kanit & Barlow ========== */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 /* ----------- Bootstrap Class custom ----------- */
 * ,html {
-    font-family: 'kanit', sans-serif;
+    font-family: 'Barlow', sans-serif;
     box-sizing: border-box;
 }
 a { text-decoration: none !important; color: #000; }
@@ -12,12 +14,38 @@ ul, li { list-style: none; }
 img { width: 100%; vertical-align: middle; }
 
 
+:root {
+
+    /* ----------- Color Text ----------- */
+    --text-info: #6B707F;
+    --text-description: #505052;
+    --text-black: #000;
+    --text-white: #fff;
+
+    --color-01: #033d93;
+    --color-02: #1489f6;
+    --color-03: #1489f6;
+
+    /* ----------- Background icons ----------- */
+    --bg-icon-01: #FE3387;
+    --bg-icon-02: #7A35FE;
+    --bg-icon-03: #68D2FF;
+    --bg-icon-04: #FE3387;
+}
+
+
 /* ================= Frequently used Class ================= */
 .kc-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
+
+.kc-topic { text-align: center; }
+.kc-topic p { text-transform: uppercase; font-weight: 600; font-size: 1rem; margin: 0; color: var(--color-02); }
+.kc-topic h1 { font-size: 2.5rem; font-weight: 700; padding-top: .8rem; }
+
+
 
 /* --------------- btn --------------- */
 .kc-btn {
@@ -37,7 +65,7 @@ img { width: 100%; vertical-align: middle; }
     z-index: 5;
 }
 .kc-btn-animate:hover {
-    border: 1px solid #1489f6;
+    border: 1px solid var(--color-02);
 }
 .kc-btn-animate::before {
     content: '';
@@ -46,21 +74,23 @@ img { width: 100%; vertical-align: middle; }
     left: 0;
     width: 0;
     height: 150%;
-    background-color: #033d93;
+    background-color: var(--color-01);
     transform: skew(50deg);
     transition: .5s ease;
     z-index: -1;
 }
 .kc-btn-animate:hover::before {
     width: 150%;
-    background-color: #1489f6;
+    background-color: var(--color-02);
 }
 
 /* --------------- slide btn --------------- */
 .kc-btn-slide {
     position: relative;
+    display: inline-block;
     color: #fff;
-    background-color: #1489f6;
+    background-color: var(--color-02);
+    overflow: hidden;
     z-index: 5;
 }
 .kc-btn-slide::before {
@@ -77,9 +107,34 @@ img { width: 100%; vertical-align: middle; }
 }
 .kc-btn-slide:hover::before {
     width: 150%;
-    background-color: #1489f6;
+    background-color: var(--color-02);
 }
 
+
+.kc-btn-tranperent {
+    position: relative;
+    display: inline-block;
+    border-radius: 100px;
+    overflow: hidden;
+    color: #fff;
+    z-index: 2;
+}
+.kc-btn-tranperent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 150%;
+    background-color: transparent;
+    transform: skew(50deg);
+    z-index: -1;
+    transition: all .5s ease;
+}
+.kc-btn-tranperent:hover::before {
+    width: 150%;
+    background-color: #fff;
+}
 
 
 /* ---------------------------------------------- */
@@ -93,6 +148,84 @@ img { width: 100%; vertical-align: middle; }
 
 
 /* --------------- navbar --------------- */
+.kc-navbar {
+    width: 100%;
+    z-index: 999;
+}
+
 .kc-nav-menu li a {
     color: #fff;
 }
+
+.kc-nav-bgchange {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.kc-nav-bgchange .kc-nav-menu li a { color: #000 !important; }
+.kc-nav-bgchange h1 { color: #000 !important; }
+.kc-nav-bgchange .kc-btn { color: #000 !important; border: 1px solid #000; }
+.kc-nav-bgchange .kc-btn:hover { color: #fff !important; border: 1px solid var(--color-02); }
+
+
+/* --------------- navbar --------------- */
+.kc-header-content .kc-header-title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------- */
+/* ================= Main ================= */
+/* ---------------------------------------------- */
+
+/* ---------------------------------------------- */
+/* ================= Section 01 | Online Document ================= */
+.kc-sc01-items { transition: all .5s ease; }
+
+.kc-sc01-items i { 
+    position: relative;
+    font-size: 50px; 
+    padding: 1.2rem;
+    border-radius: 0 50% 50% 50%;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.kc-sc01-items:hover i { border-radius: 50% 0 50% 50%; }
+
+.kc-sc01-info:nth-child(1) .kc-sc01-items { background-color: #FFF9FB; }
+.kc-sc01-info:nth-child(1) .kc-sc01-items i { background-color: var(--bg-icon-01); }
+.kc-sc01-info:nth-child(1) .kc-sc01-items:hover { background-color: var(--bg-icon-01); }
+.kc-sc01-info:nth-child(1) .kc-sc01-items:hover i { background-color: #fff; color: var(--bg-icon-01); }
+.kc-sc01-info:nth-child(1) .kc-sc01-items:hover h1,
+.kc-sc01-info:nth-child(1) .kc-sc01-items:hover p { color: var(--text-white); }
+.kc-sc01-info:nth-child(1) .kc-sc01-items:hover a { color: var(--text-white); border: 1px solid var(--text-white); }
+.kc-sc01-info:nth-child(1) .kc-sc01-items a:hover { color: var(--bg-icon-01); }
+
+
+.kc-sc01-info:nth-child(2) .kc-sc01-items { background-color: #f1edfc; }
+.kc-sc01-info:nth-child(2) .kc-sc01-items i { background-color: var(--bg-icon-02); }
+.kc-sc01-info:nth-child(2) .kc-sc01-items:hover { background-color: var(--bg-icon-02); }
+.kc-sc01-info:nth-child(2) .kc-sc01-items:hover i { background-color: #fff; color: var(--bg-icon-02); }
+.kc-sc01-info:nth-child(2) .kc-sc01-items:hover h1,
+.kc-sc01-info:nth-child(2) .kc-sc01-items:hover p { color: var(--text-white); }
+.kc-sc01-info:nth-child(2) .kc-sc01-items:hover a { color: var(--text-white); border: 1px solid var(--text-white); }
+.kc-sc01-info:nth-child(2) .kc-sc01-items a:hover { color: var(--bg-icon-02); }
+
+
+.kc-sc01-info:nth-child(3) .kc-sc01-items { background-color: #F3FBFF; }
+.kc-sc01-info:nth-child(3) .kc-sc01-items i { background-color: var(--bg-icon-03); }
+.kc-sc01-info:nth-child(3) .kc-sc01-items:hover { background-color: var(--bg-icon-03); }
+.kc-sc01-info:nth-child(3) .kc-sc01-items:hover i { background-color: #fff; color: var(--bg-icon-03); }
+.kc-sc01-info:nth-child(3) .kc-sc01-items:hover h1,
+.kc-sc01-info:nth-child(3) .kc-sc01-items:hover p { color: var(--text-white); }
+.kc-sc01-info:nth-child(3) .kc-sc01-items:hover a { color: var(--text-white); border: 1px solid var(--text-white); }
+.kc-sc01-info:nth-child(3) .kc-sc01-items a:hover { color: var(--bg-icon-03); }
+
+.kc-sc01-items .row p,
+.kc-sc01-items .row a { color: var(--text-info); }
+.kc-sc01-items .row a { border: 1px solid var(--text-info); }
+.kc-sc01-items .row a:hover { border: 1px solid var(--text-white); }
