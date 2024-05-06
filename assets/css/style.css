@@ -26,6 +26,8 @@ img { width: 100%; vertical-align: middle; }
     --color-02: #1489f6;
     --color-03: #1489f6;
 
+    --bg-body: #f8f9fa;
+
     /* ----------- Background icons ----------- */
     --bg-icon-01: #FE3387;
     --bg-icon-02: #7A35FE;
@@ -35,6 +37,7 @@ img { width: 100%; vertical-align: middle; }
 
 
 /* ================= Frequently used Class ================= */
+main { background-color: var(--bg-body);}
 .kc-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -43,7 +46,7 @@ img { width: 100%; vertical-align: middle; }
 
 .kc-topic { text-align: center; }
 .kc-topic p { text-transform: uppercase; font-weight: 600; font-size: 1rem; margin: 0; color: var(--color-02); }
-.kc-topic h1 { font-size: 2.5rem; font-weight: 700; padding-top: .8rem; }
+.kc-topic h1 { font-size: 2.5rem; font-weight: 700; padding-top: .5rem; }
 
 
 
@@ -111,6 +114,7 @@ img { width: 100%; vertical-align: middle; }
 }
 
 
+/* --------------- tranperent btn --------------- */
 .kc-btn-tranperent {
     position: relative;
     display: inline-block;
@@ -158,10 +162,11 @@ img { width: 100%; vertical-align: middle; }
 }
 
 .kc-nav-bgchange {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #fff;
+    box-shadow: 0 0 20px #eeeeee;
 }
 
 .kc-nav-bgchange .kc-nav-menu li a { color: #000 !important; }
@@ -229,3 +234,75 @@ img { width: 100%; vertical-align: middle; }
 .kc-sc01-items .row a { color: var(--text-info); }
 .kc-sc01-items .row a { border: 1px solid var(--text-info); }
 .kc-sc01-items .row a:hover { border: 1px solid var(--text-white); }
+
+
+
+
+/* ---------------------------------------------- */
+/* ================= Section 0/ | Explore Our Topics ================= */
+.kc-sc02-btn {
+    font-size: 16px;
+    padding: .6rem 1.5rem;
+    background-color: #eeeeee;
+    color: var(--text-description);
+}
+.kc-sc02-btn:hover {
+    background-color: var(--color-02);
+    color: var(--text-white);
+}
+
+.kc-sc02-active { background-color: var(--color-02); color: var(--text-white); }
+
+.kc-sc02-info { background-color: var(--text-white); }
+
+.kc-sc02-title { border-bottom: 1px solid #ccc; }
+
+.kc-sc02-title i { 
+    position: relative;
+    font-size: 20px; 
+    margin-right: .8rem;
+    padding: .5rem;
+    border-radius: 0 50% 50% 50%;
+    color: #fff;
+    transition: all .5s ease;
+}
+.kc-sc02-items:hover i { border-radius: 50% 0 50% 50%; }
+
+
+.kc-sc02-description { 
+    position: relative; 
+    transition: .25s ease; 
+    color: var(--text-info); 
+}
+.kc-sc02-description:hover { color: var(--text-black); }
+.kc-sc02-description::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: .25s ease;
+}
+.kc-sc02-description:hover::before { width: 100%; }
+
+.kc-sc02-list a i { font-size: 24px;}
+.kc-sc02-list a { padding-bottom: 1rem; color: var(--text-description); transition: .5s ease;}
+.kc-sc02-list a:hover { margin-left: 1rem; color: var(--color-02);}
+
+
+.kc-sc02-items:nth-child(1) .kc-sc02-title i {
+    background-color: var(--bg-icon-02);
+} 
+
+.kc-sc02-items-btn {
+    font-size: 16px;
+    padding: .6rem 1.5rem;
+    color: var(--text-black);
+    border: 1px solid var(--text-black);
+}
+.kc-sc02-items-btn:hover {
+    background-color: var(--color-02);
+    color: var(--text-white);
+    border: 1px solid var(--color-02);
+}
