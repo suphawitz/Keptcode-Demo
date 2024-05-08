@@ -32,7 +32,10 @@ img { width: 100%; vertical-align: middle; }
     --bg-icon-01: #FE3387;
     --bg-icon-02: #7A35FE;
     --bg-icon-03: #68D2FF;
-    --bg-icon-04: #FE3387;
+    --bg-icon-04: #ff8631;
+    --bg-icon-05: #fd5b5b;
+    --bg-icon-06: #4ad00a;
+    --bg-icon-07: #1d8ffa;
 }
 
 
@@ -45,8 +48,8 @@ main { background-color: var(--bg-body);}
 }
 
 .kc-topic { text-align: center; }
-.kc-topic p { text-transform: uppercase; font-weight: 600; font-size: 1rem; margin: 0; color: var(--color-02); }
-.kc-topic h1 { font-size: 2.5rem; font-weight: 700; padding-top: .5rem; }
+.kc-topic p { text-transform: uppercase; font-weight: 600; font-size: 1rem; margin: 0; letter-spacing: 2px; color: var(--color-02); }
+.kc-topic h1 { font-size: 2.2rem; font-weight: 600; padding-top: .5rem; }
 
 
 
@@ -121,6 +124,7 @@ main { background-color: var(--bg-body);}
     border-radius: 100px;
     overflow: hidden;
     color: #fff;
+    border: 1px solid #fff;
     z-index: 2;
 }
 .kc-btn-tranperent::before {
@@ -239,7 +243,7 @@ main { background-color: var(--bg-body);}
 
 
 /* ---------------------------------------------- */
-/* ================= Section 0/ | Explore Our Topics ================= */
+/* ================= Section 02 | Explore Our Topics ================= */
 .kc-sc02-btn {
     font-size: 16px;
     padding: .6rem 1.5rem;
@@ -255,7 +259,8 @@ main { background-color: var(--bg-body);}
 
 .kc-sc02-info { background-color: var(--text-white); }
 
-.kc-sc02-title { border-bottom: 1px solid #ccc; }
+.kc-sc02-border { width: 80%; border-bottom: 1px solid #ccc; transition: .25s ease; }
+.kc-sc02-info:hover .kc-sc02-border { width: 100%;; }
 
 .kc-sc02-title i { 
     position: relative;
@@ -291,9 +296,12 @@ main { background-color: var(--bg-body);}
 .kc-sc02-list a:hover { margin-left: 1rem; color: var(--color-02);}
 
 
-.kc-sc02-items:nth-child(1) .kc-sc02-title i {
-    background-color: var(--bg-icon-02);
-} 
+.kc-sc02-items:nth-child(1) .kc-sc02-title i { background-color: var(--bg-icon-02); } 
+.kc-sc02-items:nth-child(2) .kc-sc02-title i { background-color: var(--bg-icon-04); } 
+.kc-sc02-items:nth-child(3) .kc-sc02-title i { background-color: var(--bg-icon-05); } 
+.kc-sc02-items:nth-child(4) .kc-sc02-title i { background-color: var(--bg-icon-07); } 
+.kc-sc02-items:nth-child(5) .kc-sc02-title i { background-color: var(--bg-icon-01); } 
+.kc-sc02-items:nth-child(6) .kc-sc02-title i { background-color: var(--bg-icon-06); } 
 
 .kc-sc02-items-btn {
     font-size: 16px;
@@ -306,3 +314,32 @@ main { background-color: var(--bg-body);}
     color: var(--text-white);
     border: 1px solid var(--color-02);
 }
+
+
+/* ---------------------------------------------- */
+/* ================= Section 03 | People Trust Us ================= */
+.kc-sc03 {
+    background-color: var(--color-02);
+    background: url(../images/service_bg.jpeg) center / cover no-repeat;
+}
+
+.kc-sc03-items i { 
+    position: relative;
+    font-size: 40px; 
+    padding: 1rem;
+    border-radius: 0 50% 50% 50%;
+    color: #fff;
+    transition: all .5s ease;
+    text-align: center;
+}
+.kc-sc03-items:hover i { border-radius: 50% 0 50% 50%; }
+
+.kc-sc03-items p { color: var(--text-info); }
+
+.kc-sc03-items:nth-child(1) i { background-color: var(--bg-icon-02); }
+.kc-sc03-items:nth-child(2) i { background-color: var(--bg-icon-06); }
+.kc-sc03-items:nth-child(3) i { background-color: var(--bg-icon-07); }
+.kc-sc03-items:nth-child(4) i { background-color: var(--bg-icon-04); }
+
+.kc-sc03-btn a i { font-size: 26px; transition: .5s ease; }
+.kc-sc03-btn a:hover { color: #000; }
