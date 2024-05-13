@@ -396,7 +396,7 @@ main { background-color: var(--bg-body);}
 }
 
 .kc-sc04-menulist .kc-sc04-logo img {
-    width: 100px;
+    width: 70px;
 }
 
 .kc-sc04-menulist .kc-sc04-arrow i,
@@ -462,4 +462,88 @@ main { background-color: var(--bg-body);}
     color: var(--text-info);
 }
 .kc-sc05-items p { color: var(--text-description); }
-/* .kc-sc05-items img { width: 50px; } */
+
+
+
+/* ---------------------------------------------- */
+/* ================= Section 06 | Frequently Asked Question ================= */
+
+/* ---------- Menu ---------- */
+.kc-sc06-menu {
+    padding: 3rem;
+    box-shadow: 0 0 20px #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.kc-sc06-menu li { position: relative; list-style: disc; }
+.kc-sc06-menu li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    transition: .5s ease;
+}
+.kc-sc06-menu li:hover::before {
+    width: 100%;
+    background-color: #1489f6;
+}
+
+.kc-sc06-menu li a { 
+    font-size: 18px;
+    padding: 1rem 0; 
+    color: var(--text-black);
+    border-bottom: 1px solid #e6e6e6;
+    transition: .25s ease;
+}
+
+.kc-sc06-menu li::marker {
+    font-size: 18px;
+    color: var(--text-black);
+}
+
+.kc-sc06-menu li a svg,
+.kc-sc06-menu li a i {
+    font-weight: lighter;
+    padding: .4rem;
+    background-color: #eee;
+    color: #000;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    transition: .5s ease;
+}
+
+.kc-sc06-menu li:hover a,
+.kc-sc06-menu li:hover::marker { color: var(--color-02);}
+.kc-sc06-menu li:hover a i {
+    transform: rotate(0deg);
+    color: #fff;
+    background-color: var(--color-02);
+}
+
+.kc-sc06-menu .kc-sc06-menu-active::before { width: 100%; background-color: var(--color-02); }
+.kc-sc06-menu .kc-sc06-menu-active a,
+.kc-sc06-menu .kc-sc06-menu-active::marker { color: var(--color-02); }
+.kc-sc06-menu .kc-sc06-menu-active a svg,
+.kc-sc06-menu .kc-sc06-menu-active a i {
+    transform: rotate(0deg);
+    color: #fff;
+    background-color: var(--color-02);
+}
+
+
+/* ---------- Info show ---------- */
+.kc-sc06-list {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #ddd;
+}
+
+.kc-sc06-list i,
+.kc-sc06-list svg { transform: rotate(90deg); color: var(--color-02); }
+
+.kc-sc06-hidden { display: none; }
