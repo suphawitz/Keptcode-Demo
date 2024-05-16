@@ -547,3 +547,35 @@ main { background-color: var(--bg-body);}
 .kc-sc06-list svg { transform: rotate(90deg); color: var(--color-02); }
 
 .kc-sc06-hidden { display: none; }
+
+
+
+/* ---------------------------------------------- */
+/* ================= Section 07 | Great Customer Reletionship ================= */
+.kc-sc07 {
+    background: url(../images/cta.jpeg) center / cover no-repeat;
+}
+
+
+.kc-sc07-checkbox input[type="checkbox"] {
+    position: relative;
+    color: #fff;
+	border: 1px solid #fff;
+	border-radius: 12px;
+	background: none;
+	cursor: pointer;
+	line-height: 0;
+	outline: 0;
+    margin-right: .2rem;
+	padding: 0 !important;
+	vertical-align: text-top;
+	height: 20px;
+	width: 20px;
+	-webkit-appearance: none;
+}
+
+.kc-sc07-checkbox input[type="checkbox"]:checked {
+    background-color: #fff;
+}
+
+.kc-sc07-checkbox span { color: var(--text-white); }
