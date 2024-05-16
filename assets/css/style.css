@@ -572,6 +572,7 @@ main { background-color: var(--bg-body);}
 	height: 20px;
 	width: 20px;
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 .kc-sc07-checkbox input[type="checkbox"]:checked {
@@ -579,3 +580,63 @@ main { background-color: var(--bg-body);}
 }
 
 .kc-sc07-checkbox span { color: var(--text-white); }
+
+
+/* ---------------------------------------------- */
+/* ================= Footer ================= */
+/* ---------------------------------------------- */
+.kc-ft-contact p { padding: .8rem 0; color: var(--text-info); }
+.kc-ft-contact a {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border: 1px solid;
+    margin-right: 1rem;
+    border-radius: 30px;
+    transition: .25s ease;
+}
+.kc-ft-contact a:nth-child(1) { border-color: var(--bg-icon-07); color: var(--bg-icon-07); }
+.kc-ft-contact a:nth-child(2) { border-color: var(--bg-icon-03); color: var(--bg-icon-03); }
+.kc-ft-contact a:nth-child(3) { border-color: var(--color-01); color: var(--color-01); }
+.kc-ft-contact a:nth-child(4) { border-color: var(--bg-icon-01); color: var(--bg-icon-01); }
+
+.kc-ft-contact a svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -52%);
+}
+
+.kc-ft-contact a:hover { color: #fff; }
+.kc-ft-contact a:hover:nth-child(1) { background-color: var(--bg-icon-07); }
+.kc-ft-contact a:hover:nth-child(2) { background-color: var(--bg-icon-03); }
+.kc-ft-contact a:hover:nth-child(3) { background-color: var(--color-01); }
+.kc-ft-contact a:hover:nth-child(4) { background-color: var(--bg-icon-01); }
+
+
+.kc-ft-list li a {
+    position: relative;
+    display: inline-block;
+    padding: .8rem 0 .2rem 0;
+    color: var(--text-info);
+    transition: .25s ease;
+}
+.kc-ft-list li a:hover { color: var(--text-black); }
+
+.kc-ft-list li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition: .5s ease;
+}
+.kc-ft-list li a:hover::before {
+    width: 100%;
+    background-color: var(--text-black);
+}
+
+.kc-ft-copyright p { color: var(--text-info); }
+.kc-ft-copyright p a { color: var(--text-black); }
