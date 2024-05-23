@@ -2,17 +2,6 @@
 // // ------ Responsive Navbar ------
 // // ===============================
 
-// // Toggle to show and hide navbar menu
-// let navbarMenu = document.getElementById("menu");
-// let navbarMenuCon = document.getElementById("menu-contact");
-// let burgerMenu = document.getElementById("burger");
-
-// burgerMenu.addEventListener("click", () => {
-//   navbarMenu.classList.toggle("dp-nav-active");
-// //   navbarMenuCon.classList.toggle("dp-nav-active");
-//   burgerMenu.classList.toggle("dp-nav-active");
-// });
-
 // Nav menu if scroll is change background
 window.addEventListener('scroll', () => {
     const verticalScrollPx = window.scrollY || window.pageYOffset;
@@ -27,6 +16,33 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Toggle to show and hide navbar menu
+// let kc04Click = document.querySelectorAll(".kc-sc04-menu");
+// let kc04Show = document.getElementsByClassName("kc-sc04-show");
+
+// kc04Click.addEventListener("click", () => {
+//   kc04Show.classList.add("kc-sc04-active");
+//   kc04Click.classList.add("kc-sc04-menu-active");
+// });
+
+const kc04Click = document.querySelectorAll(".kc-sc04-menu");
+const kc04Show = document.querySelectorAll(".kc-sc04-show");
+
+function clearActive () {
+  Array.from(kc04Click).map(function(ele, index) {
+    ele.classList.remove("kc-sc04-menu-active");
+  });
+  Array.from(kc04Show).map(function(ele, index) {
+    ele.style.display = 'none';
+  });
+}
+Array.from(kc04Click).map(function(ele, index) {
+  ele.addEventListener('click', function() {
+    clearActive();
+    ele.classList.toggle("kc-sc04-menu-active");
+    document.getElementById(ele.dataset.tag).style.display = 'block';
+  });
+});
 
 // SlickJS 
 $(document).ready(function(){
