@@ -1,7 +1,3 @@
-// // ===============================
-// // ------ Responsive Navbar ------
-// // ===============================
-
 // Nav menu if scroll is change background
 window.addEventListener('scroll', () => {
     const verticalScrollPx = window.scrollY || window.pageYOffset;
@@ -25,6 +21,8 @@ window.addEventListener('scroll', () => {
 //   kc04Click.classList.add("kc-sc04-menu-active");
 // });
 
+
+// Hiden - Show 
 const kc04Click = document.querySelectorAll(".kc-sc04-menu");
 const kc04Show = document.querySelectorAll(".kc-sc04-show");
 
@@ -33,16 +31,32 @@ function clearActive () {
     ele.classList.remove("kc-sc04-menu-active");
   });
   Array.from(kc04Show).map(function(ele, index) {
-    ele.style.display = 'none';
+    ele.classList.remove('kc-sc04-show-active');
   });
 }
 Array.from(kc04Click).map(function(ele, index) {
   ele.addEventListener('click', function() {
     clearActive();
     ele.classList.toggle("kc-sc04-menu-active");
-    document.getElementById(ele.dataset.tag).style.display = 'block';
+    document.getElementById(ele.dataset.tag).classList.add('kc-sc04-show-active');
   });
 });
+
+// function clearActive () {
+//   Array.from(kc04Click).map(function(ele, index) {
+//     ele.classList.remove("kc-sc04-menu-active");
+//   });
+//   Array.from(kc04Show).map(function(ele, index) {
+//     ele.style.display = 'none';
+//   });
+// }
+// Array.from(kc04Click).map(function(ele, index) {
+//   ele.addEventListener('click', function() {
+//     clearActive();
+//     ele.classList.toggle("kc-sc04-menu-active");
+//     document.getElementById(ele.dataset.tag).style.display = 'block';
+//   });
+// });
 
 // SlickJS 
 $(document).ready(function(){
