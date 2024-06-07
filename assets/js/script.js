@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 // });
 
 
-// Hiden - Show 
+// Hiden - Show | kc-sc04
 const kc04Click = document.querySelectorAll(".kc-sc04-menu");
 const kc04Show = document.querySelectorAll(".kc-sc04-show");
 
@@ -37,10 +37,51 @@ function clearActive () {
 Array.from(kc04Click).map(function(ele, index) {
   ele.addEventListener('click', function() {
     clearActive();
-    ele.classList.toggle("kc-sc04-menu-active");
+    ele.classList.add("kc-sc04-menu-active");
+    console.log(ele);
+    console.log(document.getElementById(ele.dataset.tag));
     document.getElementById(ele.dataset.tag).classList.add('kc-sc04-show-active');
   });
 });
+
+
+// Hiden - Show | kc-sc06
+const kc06Info = document.querySelectorAll(".kc-sc06-info");
+const kc06Click = document.querySelectorAll(".kc-sc06-click");
+const kc06List = document.querySelectorAll(".kc-sc06-list");
+const kc06Active = document.querySelectorAll('[data-tag11]');
+
+function clearActiveKc06() {
+  Array.from(kc06Click).map(function(ele, index) {
+    ele.classList.remove("kc-sc06-menu-active");
+  });
+  Array.from(kc06List).map(function(ele, index) {
+    ele.classList.remove("kc-sc06-list-show");
+  });
+}
+Array.from(kc06Info).map(function(ele, index) {
+  ele.addEventListener('click', function() {
+    ele.classList.toggle("kc-sc06-info-active");
+  });
+});
+
+Array.from(kc06Click).map(function(ele, index) {
+  ele.addEventListener('click', function() {
+    clearActiveKc06();
+    ele.classList.add("kc-sc06-menu-active");
+
+    const tag22 = ele.dataset.tag22;
+
+    Array.from(kc06Active).map(function(ele, index) {
+      let kc06ActiveTag = ele.dataset.tag11;
+      // console.log(kc06ActiveTag);
+      // console.log(tag22);
+      if (tag22 === ele.dataset.tag11) {
+      };
+    });
+  });
+});
+
 
 // function clearActive () {
 //   Array.from(kc04Click).map(function(ele, index) {
