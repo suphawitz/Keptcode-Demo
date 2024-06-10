@@ -12,6 +12,15 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Navbar Responsive
+const navMenu = document.getElementById('menu-responsive');
+const navBurger = document.getElementById('menu-burger');
+
+navBurger.addEventListener('click', function() {
+  navMenu.classList.toggle('kc-nav-respon-active');
+  navBurger.classList.toggle('kc-nav-active');
+});
+
 
 // Hiden - Show | kc-sc02
 const kc02Menu = document.querySelectorAll(".kc-sc02-btn");
