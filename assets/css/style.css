@@ -282,6 +282,36 @@ main { background-color: var(--bg-body);}
     color: #fff;
     transition: all .5s ease;
 }
+
+@keyframes kc02-animate {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;  
+    }
+}
+@keyframes kc02-animatehid {
+    from {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(20);
+        opacity: 1;  
+    }
+}
+
+.kc-sc02-items { animation: kc02-animatehid .35s; display: none; }
+.kc-sc02-items-show {
+    display: block;
+    animation: kc02-animate .35s;
+}
+
+
+
 .kc-sc02-items:hover i { border-radius: 50% 0 50% 50%; }
 
 

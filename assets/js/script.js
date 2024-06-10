@@ -21,13 +21,20 @@ function clearActiveKc02() {
   Array.from(kc02Menu).map(function(ele, index) {
     ele.classList.remove("kc-sc02-active");
   });
+  Array.from(kc02List).map(function(ele, index) {
+    ele.classList.remove("kc-sc02-items-show");
+  });
 }
 
-
-Array.from(kc02List).map(function(ele, index) {
+Array.from(kc02Menu).map(function(ele, index) {
   ele.addEventListener('click', function() {
     clearActiveKc02();
-    
+    ele.classList.add('kc-sc02-active');
+    const kc02Tag = document.querySelectorAll(ele.dataset.menulist);;
+
+    Array.from(kc02Tag).map(function(ele, index) {
+      ele.classList.add('kc-sc02-items-show');
+    });
   });
 });
 
