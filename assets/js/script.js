@@ -12,21 +12,31 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Toggle to show and hide navbar menu
-// let kc04Click = document.querySelectorAll(".kc-sc04-menu");
-// let kc04Show = document.getElementsByClassName("kc-sc04-show");
 
-// kc04Click.addEventListener("click", () => {
-//   kc04Show.classList.add("kc-sc04-active");
-//   kc04Click.classList.add("kc-sc04-menu-active");
-// });
+// Hiden - Show | kc-sc02
+const kc02Menu = document.querySelectorAll(".kc-sc02-btn");
+const kc02List = document.querySelectorAll(".kc-sc02-items");
+
+function clearActiveKc02() {
+  Array.from(kc02Menu).map(function(ele, index) {
+    ele.classList.remove("kc-sc02-active");
+  });
+}
+
+
+Array.from(kc02List).map(function(ele, index) {
+  ele.addEventListener('click', function() {
+    clearActiveKc02();
+    
+  });
+});
 
 
 // Hiden - Show | kc-sc04
 const kc04Click = document.querySelectorAll(".kc-sc04-menu");
 const kc04Show = document.querySelectorAll(".kc-sc04-show");
 
-function clearActive () {
+function clearActiveKc04() {
   Array.from(kc04Click).map(function(ele, index) {
     ele.classList.remove("kc-sc04-menu-active");
   });
@@ -36,7 +46,7 @@ function clearActive () {
 }
 Array.from(kc04Click).map(function(ele, index) {
   ele.addEventListener('click', function() {
-    clearActive();
+    clearActiveKc04();
     ele.classList.add("kc-sc04-menu-active");
     console.log(ele);
     console.log(document.getElementById(ele.dataset.tag));
@@ -49,7 +59,6 @@ Array.from(kc04Click).map(function(ele, index) {
 const kc06Info = document.querySelectorAll(".kc-sc06-info");
 const kc06Click = document.querySelectorAll(".kc-sc06-click");
 const kc06List = document.querySelectorAll(".kc-sc06-list");
-const kc06Active = document.querySelectorAll('[data-tag11]');
 
 function clearActiveKc06() {
   Array.from(kc06Click).map(function(ele, index) {
@@ -69,15 +78,10 @@ Array.from(kc06Click).map(function(ele, index) {
   ele.addEventListener('click', function() {
     clearActiveKc06();
     ele.classList.add("kc-sc06-menu-active");
+    var kc06GetTag = document.querySelectorAll(ele.dataset.tagque);
 
-    const tag22 = ele.dataset.tag22;
-
-    Array.from(kc06Active).map(function(ele, index) {
-      let kc06ActiveTag = ele.dataset.tag11;
-      // console.log(kc06ActiveTag);
-      // console.log(tag22);
-      if (tag22 === ele.dataset.tag11) {
-      };
+    Array.from(kc06GetTag).map(function(ele, index) {
+      ele.classList.add('kc-sc06-list-show');
     });
   });
 });

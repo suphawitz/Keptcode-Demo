@@ -592,11 +592,25 @@ main { background-color: var(--bg-body);}
     padding: 1rem 1.5rem;
     border-radius: 8px;
     background-color: #fff;
+    transform: translateY(-20deg);
+    transition: all .25s ease;
     box-shadow: 0 0 20px #ddd;
     cursor: pointer;
 }
 
-.kc-sc06-list-show { display: block; }
+.kc-sc06-list-show { display: block; animation: kc06-show .35s; }
+
+@keyframes kc06-show {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 .kc-sc06-info { transition: all .25s ease; }
 .kc-sc06-info svg,
@@ -608,7 +622,12 @@ main { background-color: var(--bg-body);}
 .kc-sc06-info-active i,
 .kc-sc06-info-active svg { transform: rotate(270deg); transition: all .25s ease; }
 
-.kc-sc06-hidden { height: 0; overflow: hidden; transition: all .25s ease; margin: 0 !important; }
+.kc-sc06-hidden { 
+    height: 0;
+    overflow: hidden; 
+    transition: all .25s ease; 
+    margin: 0 !important; 
+}
 .kc-sc06-info-active + .kc-sc06-hidden { display: block !important; height: 100px; }
 
 
