@@ -22,6 +22,20 @@ navBurger.addEventListener('click', function() {
 });
 
 
+// ใช้ฟังค์ชั่นหากขนาดหน้าจอน้อยกว่า 920 ให้เปลี่ยนสี
+function checkScreenSize() {
+  const navMenuChangeBG = document.getElementById('navmenu');
+  if (window.innerWidth < 920) {
+    navMenuChangeBG.classList.add('kc-nav-bgchange');
+  } else {
+    navMenuChangeBG.classList.remove('kc-nav-bgchange');
+  }
+}
+// เรียกใช้ฟังก์ชันเมื่อโหลดหน้าครั้งแรก
+checkScreenSize();
+// เรียกใช้ฟังก์ชันเมื่อขนาดหน้าจอเปลี่ยนแปลง
+window.addEventListener('resize', checkScreenSize);
+
 // Hiden - Show | kc-sc02
 const kc02Menu = document.querySelectorAll(".kc-sc02-btn");
 const kc02List = document.querySelectorAll(".kc-sc02-items");

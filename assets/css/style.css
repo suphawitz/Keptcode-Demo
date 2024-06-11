@@ -167,6 +167,11 @@ main { background-color: var(--bg-body);}
 
 
 /* --------------- navbar --------------- */
+.kc-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 .kc-navbar,
 #navmenu {
     width: 100%;
@@ -189,6 +194,7 @@ main { background-color: var(--bg-body);}
 }
 
 .kc-nav-bgchange {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -204,8 +210,38 @@ main { background-color: var(--bg-body);}
 
 
 /* -------- Navbar Responsive ------- */
+.kc-nav-respon {
+    display: none;
+}
 
+.kc-nav-respon-active { display: block !important; animation: navMenu .35s; }
+@keyframes navMenu {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    } 
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+.kc-nav-respon ul {
+    width: 90%;
+    background-color: #fff;
+}
+.kc-nav-respon ul li a {
+    display: block;
+    font-weight: 500;
+    padding-top: 1rem;
+    color: #000;
+    transition: .25s ease;
+}
+.kc-nav-respon ul li:last-child a { padding-bottom: 1rem; }
+.kc-nav-respon ul li a:hover {
+    padding-left: 2rem;
+    color: var(--color-02);
+}
 .kc-nav-bur { 
     display: none;
     width: auto !important;
@@ -219,7 +255,7 @@ main { background-color: var(--bg-body);}
     .kc-nav-menu,
     .kc-nav-btn { visibility: hidden !important; }
 
-    .kc-nav-bur { display: block !important; z-index: 88;}
+    .kc-nav-bur { display: block !important; z-index: 8;}
 
 }
 
