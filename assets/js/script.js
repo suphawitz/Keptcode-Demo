@@ -21,6 +21,27 @@ navBurger.addEventListener('click', function() {
   navBurger.classList.toggle('kc-nav-active');
 });
 
+// Create an class Active nav link on scroll Active menu
+let Kcsections = document.querySelectorAll('.kc-section');
+let KcnavLink = document.querySelectorAll('.kc-nav-menu-change li a');
+
+window.onscroll = () => {
+  Kcsections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+    // console.log(id);
+
+    if (top >= offset && top < offset + height) {
+      KcnavLink.forEach(links => {
+        links.classList.remove('kc-nav-change');
+        document.querySelector('.kc-nav-menu-change li a[href*=' + id + ']') .classList.add('kc-nav-change');
+      });
+    };
+  });
+};
+
 
 // ใช้ฟังค์ชั่นหากขนาดหน้าจอน้อยกว่า 920 ให้เปลี่ยนสี
 function checkScreenSize() {
@@ -116,22 +137,6 @@ Array.from(kc06Click).map(function(ele, index) {
   });
 });
 
-
-// function clearActive () {
-//   Array.from(kc04Click).map(function(ele, index) {
-//     ele.classList.remove("kc-sc04-menu-active");
-//   });
-//   Array.from(kc04Show).map(function(ele, index) {
-//     ele.style.display = 'none';
-//   });
-// }
-// Array.from(kc04Click).map(function(ele, index) {
-//   ele.addEventListener('click', function() {
-//     clearActive();
-//     ele.classList.toggle("kc-sc04-menu-active");
-//     document.getElementById(ele.dataset.tag).style.display = 'block';
-//   });
-// });
 
 // SlickJS 
 $(document).ready(function(){
