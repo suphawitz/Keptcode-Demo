@@ -194,10 +194,6 @@ main { background-color: var(--bg-body);}
 }
 
 .kc-nav-bgchange {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: #fff;
     box-shadow: 0 0 20px #eeeeee;
 }
@@ -212,6 +208,7 @@ main { background-color: var(--bg-body);}
 /* -------- Navbar Responsive ------- */
 .kc-nav-respon {
     display: none;
+    margin-top: .5rem;
 }
 
 .kc-nav-respon-active { display: block !important; animation: navMenu .35s; }
@@ -228,6 +225,7 @@ main { background-color: var(--bg-body);}
 
 .kc-nav-respon ul {
     width: 90%;
+    box-shadow: 0 0 20px #efefef;
     background-color: #fff;
 }
 .kc-nav-respon ul li a {
