@@ -3,13 +3,12 @@ window.addEventListener('scroll', () => {
     const verticalScrollPx = window.scrollY || window.pageYOffset;
     const navMenu = document.getElementById("navmenu");
   
-    // console.log(verticalScrollPx > 500);
     if (verticalScrollPx > 10) {
       navMenu.classList.add("kc-nav-bgchange");
-      // document.body.style.backgroundColor = 'red';
-    } else {
-      navMenu.classList.remove("kc-nav-bgchange");
-    }
+    } 
+    // else {
+    //   navMenu.classList.remove("kc-nav-bgchange");
+    // }
 });
 
 // Navbar Responsive

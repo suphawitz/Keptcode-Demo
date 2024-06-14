@@ -312,10 +312,41 @@ main { background-color: var(--bg-body);}
 }
 
 
-/* --------------- header --------------- */
-.kc-header-content .kc-header-title {
+/* --------------- Header content --------------- */
+.kc-hd-content .kc-hd-title {
     font-size: 3rem;
     font-weight: 600;
+}
+
+.kc-hd-form form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 70px;
+
+}
+.kc-hd-form .kc-hd-btn {
+    display: block;
+}
+
+@media screen and (max-width: 920px) {
+    .kc-hd-form form {
+        display: block;
+        padding: 2rem 4rem;
+    }
+    .kc-hd-form form > input,
+    .kc-hd-form select { 
+        display: block; 
+        width: 100%;
+        padding: 15px 0; 
+        border-bottom: 1px solid #dee2e6 !important;
+        border-right: none !important;
+    }
+    .kc-hd-btn .kc-btn {
+        margin-top: 1.5rem;
+    }
 }
 
 
