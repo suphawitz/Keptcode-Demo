@@ -6,6 +6,8 @@ window.addEventListener('scroll', () => {
     if (verticalScrollPx > 10) {
       navMenu.classList.add("kc-nav-bgchange");
     } 
+
+    // Remove change bg on top page again
     // else {
     //   navMenu.classList.remove("kc-nav-bgchange");
     // }
@@ -55,6 +57,31 @@ function checkScreenSize() {
 checkScreenSize();
 // เรียกใช้ฟังก์ชันเมื่อขนาดหน้าจอเปลี่ยนแปลง
 window.addEventListener('resize', checkScreenSize);
+
+
+
+// ======= Scroll Animation on pages | Palalax Scolling =======
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+    var reveals = document.querySelectorAll('.kc-scroll-reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 250;
+     
+        // add scroll active
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('kc-scroll-active');
+        }
+         else {
+            reveals[i].classList.remove('kc-scroll-active');
+        }
+    }
+}
+
+
 
 // Hiden - Show | kc-sc02
 const kc02Menu = document.querySelectorAll(".kc-sc02-btn");

@@ -51,6 +51,17 @@ main { background-color: var(--bg-body);}
 .kc-topic p { text-transform: uppercase; font-weight: 600; font-size: 1rem; margin: 0; letter-spacing: 2px; color: var(--color-02); }
 .kc-topic h1 { font-size: 2.2rem; font-weight: 600; padding-top: .5rem; }
 
+/* -------- Scroll Animation -------- */
+.kc-scroll-reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.kc-scroll-active {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 /* --------------- Slick slider Custom --------------- */
 .slick-dots li button::before { content: none !important; }
