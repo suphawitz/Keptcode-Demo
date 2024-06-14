@@ -75,9 +75,11 @@ function reveal() {
         if (revealTop < windowHeight - revealPoint) {
             reveals[i].classList.add('kc-scroll-active');
         }
-         else {
-            reveals[i].classList.remove('kc-scroll-active');
-        }
+
+        // Remove class on scroll up again
+        // else {
+        //     reveals[i].classList.remove('kc-scroll-active');
+        // }
     }
 }
 
