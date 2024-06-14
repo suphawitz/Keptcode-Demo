@@ -16,8 +16,6 @@ git clone https://github.com/suphawitz/Keptcode-Demo.git
 ```
 
 ## Template your project
-[enter link description here]()
-
  - [Template this website](https://keptcode-demo.netlify.app)
 
 ![enter image description here](assets/images/Zfull-page.png)
